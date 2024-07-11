@@ -1,8 +1,8 @@
 interface functions {
     void checkout();
-    void returnItem();
-    boolean isAvailable();
-    void displayDetails();
+    void returnitem();
+    boolean isavailable();
+    void displaydetails();
 }
 class Book implements functions {
     String title;
@@ -26,16 +26,16 @@ class Book implements functions {
         }
     }
 
-    public void returnItem() {
+    public void returnitem() {
         available = true;
         System.out.println("Returned: " + title);
     }
 
-    public boolean isAvailable() {
+    public boolean isavailable() {
         return available;
     }
 
-    public void displayDetails() {
+    public void displaydetails() {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Page Count: " + pageCount);
@@ -48,17 +48,17 @@ public class librarymanagementsystem {
         Book book2 = new Book("Let Us C++", " Yashavant Kanetkar", 362);
 
         System.out.println("Book 1 Details:");
-        book1.displayDetails();
+        book1.displaydetails();
         book1.checkout();
-        book1.displayDetails();
-        book1.returnItem();
-        book1.displayDetails();
+        book1.displaydetails();
+        book1.returnitem();
+        book1.displaydetails();
 
         System.out.println("\nBook 2 Details:");
-        book2.displayDetails();
+        book2.displaydetails();
         book2.checkout();
-        book2.displayDetails();
-        book2.returnItem();
-        book2.displayDetails();
+        book2.displaydetails();
+        book2.returnitem();
+        book2.displaydetails();
     }
 }
